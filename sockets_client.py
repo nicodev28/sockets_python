@@ -1,11 +1,15 @@
-# Sockets réseau : client
+# Sockets : client
 
 import socket
 import time
 
+# Variables
+
 HOST_IP = "127.0.0.1"
 HOST_PORT = 32000
 MAX_DATA_SIZE = 1024
+
+# Connection to the server
 
 print(f"Attente de connexion au serveur {HOST_IP}, port {HOST_PORT} ...")
 while True:
@@ -18,6 +22,8 @@ while True:
     else:
         print(f"Connexion établie sur le serveur")
         break
+
+# Data exchange
 
 while True:
     data_receive = s.recv(MAX_DATA_SIZE)
